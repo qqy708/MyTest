@@ -1,0 +1,1 @@
+openssl x509 -in cacert.pem -outform DER -out gg1.der

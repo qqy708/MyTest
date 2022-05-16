@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{a9a381ce-abbf-4d82-8079-0c328e5d0705}</ProjectGuid>
+    <RootNamespace>OpensslInVs</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Program Files\OpenSSL-Win64\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files\OpenSSL-Win64\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libcrypto.lib;libssl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\applink.c" />
+    <ClCompile Include="509.cpp" />
+    <ClCompile Include="class.cpp" />
+    <ClCompile Include="DisplayFileContent.cpp" />
+    <ClCompile Include="ecdsa256.cpp" />
+    <ClCompile Include="ecdsa384.cpp" />
+    <ClCompile Include="main256.cpp" />
+    <ClCompile Include="main384.cpp" />
+    <ClCompile Include="batch.cpp" />
+    <ClCompile Include="sm2_create_key_pair.cpp" />
+    <ClCompile Include="sm2_sign_and_verify.cpp" />
+    <ClCompile Include="sm3_with_preprocess.cpp" />
+    <ClCompile Include="Source.cpp" />
+    <ClCompile Include="test_demo.cpp" />
+    <ClCompile Include="test_sm2_sign_and_verify.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\aes.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\asn1.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\asn1err.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\asn1t.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\asn1_mac.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\async.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\asyncerr.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\bio.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\bioerr.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\blowfish.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\bn.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\bnerr.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\buffer.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\buffererr.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\camellia.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\cast.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\cmac.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\cms.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\cmserr.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\comp.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\comperr.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\conf.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\conferr.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\conf_api.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\crypto.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\cryptoerr.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\ct.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\cterr.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\des.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\dh.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\dherr.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\dsa.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\dsaerr.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\dtls1.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\ebcdic.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\ec.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\ecdh.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\ecerr.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\engine.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\engineerr.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\err.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\evp.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\evperr.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\e_os2.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\hmac.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\idea.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\kdf.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\kdferr.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\lhash.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\md2.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\md4.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\md5.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\mdc2.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\modes.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\objects.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\objectserr.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\obj_mac.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\ocsp.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\ocsperr.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\opensslconf.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\opensslv.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\ossl_typ.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\pem.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\pem2.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\pemerr.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\pkcs12.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\pkcs12err.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\pkcs7.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\pkcs7err.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\rand.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\randerr.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\rand_drbg.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\rc2.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\rc4.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\rc5.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\ripemd.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\rsa.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\rsaerr.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\safestack.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\seed.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\sha.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\srp.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\srtp.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\ssl.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\ssl2.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\ssl3.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\sslerr.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\stack.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\store.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\storeerr.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\symhacks.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\tls1.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\ts.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\tserr.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\txt_db.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\ui.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\uierr.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\whrlpool.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\x509.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\x509err.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\x509v3.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\x509v3err.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\x509_vfy.h" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\__DECC_INCLUDE_EPILOGUE.H" />
+    <ClInclude Include="..\..\..\..\..\Program Files\OpenSSL-Win64\include\openssl\__DECC_INCLUDE_PROLOGUE.H" />
+    <ClInclude Include="..\..\..\Downloads\ECC-Diffie-Hellman-master\ECC-Diffie-Hellman-master\ECC.h" />
+    <ClInclude Include="ecdsa.h" />
+    <ClInclude Include="sm2_cipher_error_codes.h" />
+    <ClInclude Include="sm2_create_key_pair.h" />
+    <ClInclude Include="sm2_sign_and_verify.h" />
+    <ClInclude Include="sm3_with_preprocess.h" />
+    <ClInclude Include="test_sm2_sign_and_verify.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
